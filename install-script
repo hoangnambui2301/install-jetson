@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# back to previous directory
+cd ../
+
+
+# check updates
+sudo apt update
+sudo apt-get update
+
+
+# remove python2.7.x and install python3 and pip3
+sudo apt purge -y python2.7-minimal
+sudo apt-get install python3-pip
+sudo ln -s /usr/bin/python3 /usr/bin/python
+sudo ln -s /usr/bin/pip3 /usr/bin/pip
+
+
+# install jetson-stats
+sudo -H pip install -U jetson-stats
+
+
+# install jetson-fan-ctl
+git clone https://github.com/Pyrestone/jetson-fan-ctl.git
+cd ./jetson-fan-ctl
+sudo ./install.sh
+
+
+# install torch and torchvision
+# install torch v1.9.0 
+wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O torch-1.9.0-cp36-cp36m-linux_aarch64.whl
+sudo apt-get install libopenblas-base libopenmpi-dev 
+pip install Cython
+pip install torch-1.9.0-cp36-cp36m-linux_aarch64.whl
+
+# install torchvision v0.10.0
+sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+pip install torchvision
