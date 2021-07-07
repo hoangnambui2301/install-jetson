@@ -32,7 +32,7 @@ pip3 install Cython
 pip3 install torch-1.9.0-cp36-cp36m-linux_aarch64.whl
 
 # install torchvision v0.10.0
-sudo apt-get install -y libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
 pip3 install torchvision
 
 
