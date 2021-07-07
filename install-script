@@ -27,13 +27,11 @@ sudo ./install.sh
 # install torch and torchvision
 # install torch v1.9.0 
 wget https://nvidia.box.com/shared/static/2cqb9jwnncv9iii4u60vgd362x4rnkik.whl -O torch-1.9.0-cp36-cp36m-linux_aarch64.whl
-sudo apt-get update
 sudo apt-get install -y libopenblas-base libopenmpi-dev 
 pip3 install Cython
 pip3 install torch-1.9.0-cp36-cp36m-linux_aarch64.whl
 
 # install torchvision v0.10.0
-sudo apt-get update
 sudo apt-get install -y libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
 pip3 install torchvision
 
